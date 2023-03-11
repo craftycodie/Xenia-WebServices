@@ -26,6 +26,8 @@ services:
     build: .
     volumes:
       - ./:/app
+    environment:
+      MONGO_URI: mongodb://root:root@mongo:27017/
     command: |
       sh -c '
         printf "Starting the application \\n"
