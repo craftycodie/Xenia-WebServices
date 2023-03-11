@@ -1,4 +1,4 @@
-FROM node:19.7-alpine AS builder
+FROM node:18.15-alpine AS builder
 
 RUN mkdir /.npm-global
 ARG NPM_CONFIG_PREFIX=/.npm-global
