@@ -18,7 +18,7 @@ title_id = "4D5307E6" # MS-2022
     [[patch.be32]]
         address = 0x823B6E10
         value = 0x60000000
-    
+
     [[patch.be32]]
         address = 0x823B6D80
         value = 0x60000000
@@ -47,4 +47,4 @@ title_id = "4D5307E6" # MS-2022
 
     [[patch.be16]]
         address = 0x82400C60
-        value = 0x4800
+        value = 0x4800        address = 0x82400c60

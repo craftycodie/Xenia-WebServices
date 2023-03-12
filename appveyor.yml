@@ -39,4 +39,3 @@ on_failure:
 # Not yet!
 #deploy_script:
 #  - ps: if ($env:APPVEYOR_REPO_BRANCH -eq "main") {C:\projects\Xenia-WebServices\build_scripts\trigger-redeploy.ps1}
-  
