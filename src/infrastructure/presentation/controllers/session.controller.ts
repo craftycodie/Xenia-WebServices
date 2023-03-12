@@ -262,8 +262,8 @@ export class SessionController {
       totalPlayers: players.length,
       machines,
     };
-  }  
-  
+  }
+
   @Post('/:sessionId/modify')
   @ApiParam({ name: 'titleId', example: '4D5307E6' })
   @ApiParam({ name: 'sessionId', example: 'B36B3FE8467CFAC7' })
