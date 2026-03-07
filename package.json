@@ -58,7 +58,9 @@
     "rimraf": "^6.1.2",
     "rxjs": "^7.8.2",
     "tiny-types": "^1.24.3",
-    "uuid": "^13.0.0"
+    "uuid": "^13.0.0",
+    "ws": "^8.19.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@nestjs/cli": "^11.0.16",

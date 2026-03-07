@@ -9,6 +9,7 @@ import compression from 'compression';
 import helmet from 'helmet';
 import { ConsoleLogger } from '@nestjs/common';
 import fs from 'fs';
+import { attachWSServer } from './src/infrastructure/presentation/websockets-server';
 
 async function bootstrap() {
   const logger = new ConsoleLogger('Main');
@@ -67,13 +68,15 @@ async function bootstrap() {
   // Heroku + Nginx
   if (Heroku_Nginx_enabled) {
     // Listen to ngnix socket
-    await app.listen('/tmp/nginx.socket');
+    const server = await app.listen('/tmp/nginx.socket');
+    attachWSServer(server);
 
     // Let Ngnix know we want to start serving from the proxy
     fs.openSync('/tmp/app-initialized', 'w');
   } else {
     // Listen on all network interfaces
-    await app.listen(PORT, '0.0.0.0');
+    const server = await app.listen(PORT, '0.0.0.0');
+    attachWSServer(server);
   }
 
   logger.debug(``);
